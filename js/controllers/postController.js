@@ -50,7 +50,10 @@ class PostController {
         postDiv.className = 'post';
         postDiv.innerHTML = `
             <div class="post-header">
-                <span class="post-author">${post.author.username}</span>
+                <div class="post-author">
+                    <img src="assets/images/person.png" alt="User Icon" class="user-icon">
+                    <span>${post.author.username}</span>
+                </div>
                 <span class="post-date">${this.formatDate(post.createdAt)}</span>
             </div>
             <div class="post-content">${post.content}</div>
