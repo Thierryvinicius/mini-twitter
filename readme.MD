@@ -49,7 +49,6 @@ A API do projeto está disponível em: https://mini-twitter-api-vy9q.onrender.co
 - `register.png` - Tela de registro
 - `feed.png` - Feed de postagens
 - `profile.png` - Perfil do usuário
-- `create-post.png` - Criação de post
 - `edit-profile.png` - Edição de perfil
 
 ## Desenvolvido por
