@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Twitter</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Mini Twitter Logo" class="logo-img">
+                <span>Mini Twitter</span>
+            </div>
+            <div id="navLinks" class="nav-links hidden">
+                <a href="#" id="homeLink" class="nav-link">Home</a>
+                <a href="#" id="profileLink" class="nav-link">Perfil</a>
+                <a href="#" id="logoutLink" class="nav-link">Sair</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section id="authSection" class="auth-section">
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Login</button>
+                    <button class="auth-tab" data-tab="register">Registro</button>
+                </div>
+
+                <form id="loginForm" class="auth-form">
+                    <h2>Login</h2>
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Senha</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
+
+                <form id="registerForm" class="auth-form hidden">
+                    <h2>Registro</h2>
+                    <div class="form-group">
+                        <label for="registerUsername">Nome de Usuário</label>
+                        <input type="text" id="registerUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Senha</label>
+                        <input type="password" id="registerPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="mainSection" class="main-section hidden">
+            <div class="post-form">
+                <textarea id="postContent" placeholder="O que está acontecendo?" maxlength="280"></textarea>
+                <div class="post-form-footer">
+                    <span id="charCount">280</span>
+                    <button id="postButton" class="btn btn-primary">Postar</button>
+                </div>
+            </div>
+
+            <div id="postsContainer" class="posts-container">
+            </div>
+        </section>
+
+        <section id="profileSection" class="profile-section hidden">
+            <div class="profile-header">
+                <h2 id="profileUsername">Nome do Usuário</h2>
+                <button id="editProfileBtn" class="btn btn-secondary">Editar Perfil</button>
+            </div>
+
+            <div id="editProfileForm" class="edit-profile-form hidden">
+                <div class="form-group">
+                    <label for="editUsername">Nome de Usuário</label>
+                    <input type="text" id="editUsername">
+                </div>
+                <div class="form-group">
+                    <label for="editEmail">Email</label>
+                    <input type="email" id="editEmail">
+                </div>
+                <button id="saveProfileBtn" class="btn btn-primary">Salvar</button>
+                <button id="cancelEditBtn" class="btn btn-secondary">Cancelar</button>
+            </div>
+
+            <div id="userPostsContainer" class="posts-container">
+            </div>
+        </section>
+    </main>
+
+    <script src="js/repositories/api.js"></script>
+    
+    <script src="js/views/authView.js"></script>
+    <script src="js/views/postView.js"></script>
+    <script src="js/views/profileView.js"></script>
+    
+    <script src="js/controllers/authController.js"></script>
+    <script src="js/controllers/postController.js"></script>
+    <script src="js/controllers/profileController.js"></script>
+    
+    <script src="js/app.js"></script>
+</body>
+</html> 
