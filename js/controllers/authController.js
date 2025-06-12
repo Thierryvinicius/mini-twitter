@@ -21,7 +21,6 @@ class AuthController {
             localStorage.setItem('user', JSON.stringify(response.user));
             showMainSection();
             
-            // Recarregar posts após login
             const postController = new PostController();
             postController.loadPosts();
         } catch (error) {

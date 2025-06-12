@@ -1,4 +1,3 @@
-// Configuração da API
 const API_URL = 'https://mini-twitter-api-vy9q.onrender.com';
 
 async function fetchAPI(endpoint, options = {}) {

@@ -108,5 +108,4 @@ class PostController {
     }
 }
 
-// Inicializar o controlador
 new PostController(); 
